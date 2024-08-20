@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: CloudFormation template to create a VPC with public and private subnets, a route table, and an Internet gateway.
+Description: CloudFormation template to create a VPC with public and private subnets, a route table, an Internet gateway, NAT Gateway, EC2 etc
 
 #This resource creates a VPC
 Resources:
@@ -159,7 +159,7 @@ Resources:
       SubnetId: !Ref SophPrivateSubnet
       SecurityGroupIds:
         - !Ref SophSG
-      ImageId: ami-0103953a003440c37
+      ImageId: #Include your image id here
 
       Tags:
         - Key: Name
